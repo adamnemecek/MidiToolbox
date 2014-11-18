@@ -10,6 +10,12 @@
 		326F389A1A1B1D4A0021A48B /* MidiToolbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 326F38991A1B1D4A0021A48B /* MidiToolbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		326F38A01A1B1D4A0021A48B /* MidiToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326F38941A1B1D4A0021A48B /* MidiToolbox.framework */; };
 		326F38A71A1B1D4A0021A48B /* MidiToolboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F38A61A1B1D4A0021A48B /* MidiToolboxTests.swift */; };
+		326F38B11A1B1D8D0021A48B /* MTMusicSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F38B01A1B1D8D0021A48B /* MTMusicSequence.swift */; };
+		326F38B31A1B1DAB0021A48B /* MTMusicTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F38B21A1B1DAB0021A48B /* MTMusicTrack.swift */; };
+		326F38B51A1B1DBB0021A48B /* MTMusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F38B41A1B1DBB0021A48B /* MTMusicPlayer.swift */; };
+		326F38B71A1B1DCE0021A48B /* MTMusicEventIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F38B61A1B1DCE0021A48B /* MTMusicEventIterator.swift */; };
+		326F38B91A1B1E2D0021A48B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326F38B81A1B1E2D0021A48B /* AudioToolbox.framework */; };
+		326F38BB1A1B1ED10021A48B /* confirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F38BA1A1B1ED10021A48B /* confirm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		326F389F1A1B1D4A0021A48B /* MidiToolboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MidiToolboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		326F38A51A1B1D4A0021A48B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		326F38A61A1B1D4A0021A48B /* MidiToolboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiToolboxTests.swift; sourceTree = "<group>"; };
+		326F38B01A1B1D8D0021A48B /* MTMusicSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMusicSequence.swift; sourceTree = "<group>"; };
+		326F38B21A1B1DAB0021A48B /* MTMusicTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMusicTrack.swift; sourceTree = "<group>"; };
+		326F38B41A1B1DBB0021A48B /* MTMusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMusicPlayer.swift; sourceTree = "<group>"; };
+		326F38B61A1B1DCE0021A48B /* MTMusicEventIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMusicEventIterator.swift; sourceTree = "<group>"; };
+		326F38B81A1B1E2D0021A48B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		326F38BA1A1B1ED10021A48B /* confirm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confirm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326F38B91A1B1E2D0021A48B /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +85,13 @@
 			isa = PBXGroup;
 			children = (
 				326F38991A1B1D4A0021A48B /* MidiToolbox.h */,
+				326F38B01A1B1D8D0021A48B /* MTMusicSequence.swift */,
+				326F38B21A1B1DAB0021A48B /* MTMusicTrack.swift */,
+				326F38B41A1B1DBB0021A48B /* MTMusicPlayer.swift */,
+				326F38B61A1B1DCE0021A48B /* MTMusicEventIterator.swift */,
+				326F38BA1A1B1ED10021A48B /* confirm.swift */,
 				326F38971A1B1D4A0021A48B /* Supporting Files */,
+				326F38B81A1B1E2D0021A48B /* AudioToolbox.framework */,
 			);
 			path = MidiToolbox;
 			sourceTree = "<group>";
@@ -209,6 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326F38B31A1B1DAB0021A48B /* MTMusicTrack.swift in Sources */,
+				326F38B51A1B1DBB0021A48B /* MTMusicPlayer.swift in Sources */,
+				326F38B11A1B1D8D0021A48B /* MTMusicSequence.swift in Sources */,
+				326F38B71A1B1DCE0021A48B /* MTMusicEventIterator.swift in Sources */,
+				326F38BB1A1B1ED10021A48B /* confirm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +339,7 @@
 		326F38AB1A1B1D4A0021A48B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -326,12 +351,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		326F38AC1A1B1D4A0021A48B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

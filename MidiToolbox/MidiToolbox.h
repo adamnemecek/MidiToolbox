@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <CoreAudio/CoreAudio.h>
 
 //! Project version number for MidiToolbox.
 FOUNDATION_EXPORT double MidiToolboxVersionNumber;
