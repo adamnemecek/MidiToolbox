@@ -91,7 +91,7 @@ class MTMusicTrack: NSObject {
     }
     
     func setDestAUNode(node: AUNode?) {
-        if let n = node? {
+        if let n = node {
             (confirm)(MusicTrackSetDestNode(track, n))
         }
     }
@@ -103,7 +103,7 @@ class MTMusicTrack: NSObject {
     }
     
     func setDestMIDIEndpoint(endpoint: MIDIEndpointRef?) {
-        if let ep = endpoint? {
+        if let ep = endpoint {
             (confirm)(MusicTrackSetDestMIDIEndpoint(track, ep))
         }
     }

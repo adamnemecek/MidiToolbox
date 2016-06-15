@@ -14,8 +14,6 @@ import Cocoa
 import AudioToolbox
 
 
-typealias MusicSequenceType = UInt32
-
 
 class MTMusicSequence: NSObject {
     
@@ -43,13 +41,13 @@ class MTMusicSequence: NSObject {
     }
     
     func setMIDIEndpoint(endpoint: MIDIEndpointRef?) {
-        if let ep = endpoint? {
+        if let ep = endpoint {
             (confirm)(MusicSequenceSetMIDIEndpoint(sequence, ep))
         }
     }
     
     func setAUGraph(augraph: AUGraph?) {
-        if let augr = augraph? {
+        if let augr = augraph {
             (confirm)(MusicSequenceSetAUGraph(sequence, augr))
         }
     }
@@ -101,17 +99,14 @@ class MTMusicSequence: NSObject {
     }
     
     func getInfoDictionary() -> CFDictionary? {
-        if let cfd = MusicSequenceGetInfoDictionary(sequence)? {
+        let cfd = MusicSequenceGetInfoDictionary(sequence)
+        if cfd == MusicSequenceGetInfoDictionary(sequence){
             return cfd
         }
         return nil
     }
     
-    func getSequenceType() -> MusicSequenceType {
-        var mst = MusicSequenceType()
-        (confirm)(MusicSequenceGetSequenceType(sequence, &mst))
-        return mst
-    }
+
     
     func setSequenceType(type: MusicSequenceType) {
         (confirm)(MusicSequenceSetSequenceType(sequence, type))
@@ -151,10 +146,10 @@ class MTMusicSequence: NSObject {
 
     /*
     struct CABarBeatTime {
-        bar            : UInt32;
-        beat           : UInt16;
-        subbeat        : UInt16;
-        subbeatDivisor : UInt16;
-        reserved       : UInt16;
+        bar            : UInt;
+        beat           : UInt;
+        subbeat        : UInt;
+        subbeatDivisor : UInt;
+        reserved       : UInt;
     };
     */

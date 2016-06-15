@@ -13,7 +13,7 @@ import AudioToolbox
 func confirm(err: OSStatus) {
     if err == 0 { return }
     
-    switch(Int(err)) {
+    switch(CInt(err)) {
         
     case kMIDIInvalidClient     :
         NSLog( "OSStatus error:  kMIDIInvalidClient ");
