@@ -74,7 +74,7 @@ class MTMusicEventIterator: NSObject {
     
     // Create a new iterator, which automatically points at the first event on the iterator's music track.
     
-        bool hasCurrentEvent;
+        DarwinBoolean hasCurrentEvent;
     
         MusicEventIteratorHasCurrentEvent (myIterator, &hasCurrentEvent);
     
@@ -101,7 +101,7 @@ class MTMusicEventIterator: NSObject {
         // Points iterator just beyond the final event on its music track
         MusicEventIteratorSeek (myIterator, kMusicTimeStamp_EndOfTrack);
     
-        bool hasPreviousEvent;
+        DarwinBoolean hasPreviousEvent;
         MusicEventIteratorHasPreviousEvent (myIterator, &hasPreviousEvent);
     
         while (hasPreviousEvent) {
@@ -116,28 +116,27 @@ class MTMusicEventIterator: NSObject {
     
     // Indicates whether or not a music track contains an event before the music event iterator’s current position.
     
-    func hasPreviousEvent() -> Boolean {
-        var hasEvent = Boolean()
+    func hasPreviousEvent() -> DarwinBoolean {
+        var hasEvent = DarwinBoolean(false)
         (confirm)(MusicEventIteratorHasPreviousEvent(eventIterator, &hasEvent))
         return hasEvent
     }
     
     // Indicates whether or not a music track contains an event beyond the music event iterator’s current position.
     
-    func hasNextEvent() -> Boolean {
-        var hasEvent = Boolean()
+    func hasNextEvent() -> DarwinBoolean {
+        var hasEvent = DarwinBoolean(false)
         (confirm)(MusicEventIteratorHasNextEvent(eventIterator, &hasEvent))
         return hasEvent
     }
     
     // Indicates whether or not a music track contains an event at the music event iterator’s current position.
     
-    func hasCurrentEvent() -> Boolean {
-        var hasEvent = Boolean()
+    func hasCurrentEvent() -> DarwinBoolean {
+        var hasEvent = DarwinBoolean(false)
         (confirm)(MusicEventIteratorHasCurrentEvent(eventIterator, &hasEvent))
         return hasEvent
     }
-    
     
     /*------------------------------------*
      |  MANAGING MUSIC EVENT INFORMATION  |
@@ -147,7 +146,7 @@ class MTMusicEventIterator: NSObject {
     
     MUSIC EVENT TYPES:
     
-    typealias MusicEventType = UInt32
+    typealias MusicEventType = UInt
     
     kMusicEventType_NULL                  0
     kMusicEventType_ExtendedNote          1
